@@ -121,7 +121,7 @@
     "# Prepare for iteration over datasets\n",
     "multi_otus <- list(F5_top=c_top5f, F3_top=d_top3f, F101=a_101f, F3=b_3f)\n",
     "names <- c(\"F5_top\", \"F3_top\", \"F101\", \"F3\")\n",
-    "registerDoParallel(makeCluster(4))\n",
+    "registerDoParallel(makeCluster(2))\n",
     "\n",
     "# Iteration\n",
     "foreach(i=1:length(multi_otus), .packages=c('FEAST','textmineR')) %dopar% {\n",
